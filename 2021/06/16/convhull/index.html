@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="什么是凸包凸包是计算几何中的概念。 在一个实数向量空间V中, 对于给定几何X,所有包含X的凸集的交集S被称为X的凸包。 凸包的应用场景有哪些利用凸包计算二维平面的面积或者三维空间的体积 matlab中怎样使用凸包convhull和convhulln函数返回最小的凸包边界 二维 123456P &#x3D; [0 0; 1 1; 1.5 0.5; 1.5 -0.5; 1.25 0.3; 1 0; 1.25 -">
+<meta name="description" content="什么是凸包凸包是计算几何中的概念。 在一个实数向量空间V中, 对于给定几何X,所有包含X的凸集的交集S被称为X的凸包。 凸集凸集（Convex set）是一个点集合，其中每两点之间的直线点都落在该点集合中。凸多边形是: 如果把一个多边形的所有边中，有一条边向两方无限延长成为一直线时，其他各边都在此直线的同旁，那么这个多边形就叫做凸多边形。 凸包的应用场景有哪些利用凸包计算二维平面的面积或者三维空间">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="凸包">
 <meta property="og:url" content="http://example.com/2021/06/16/convhull/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="什么是凸包凸包是计算几何中的概念。 在一个实数向量空间V中, 对于给定几何X,所有包含X的凸集的交集S被称为X的凸包。 凸包的应用场景有哪些利用凸包计算二维平面的面积或者三维空间的体积 matlab中怎样使用凸包convhull和convhulln函数返回最小的凸包边界 二维 123456P &#x3D; [0 0; 1 1; 1.5 0.5; 1.5 -0.5; 1.25 0.3; 1 0; 1.25 -">
+<meta property="og:description" content="什么是凸包凸包是计算几何中的概念。 在一个实数向量空间V中, 对于给定几何X,所有包含X的凸集的交集S被称为X的凸包。 凸集凸集（Convex set）是一个点集合，其中每两点之间的直线点都落在该点集合中。凸多边形是: 如果把一个多边形的所有边中，有一条边向两方无限延长成为一直线时，其他各边都在此直线的同旁，那么这个多边形就叫做凸多边形。 凸包的应用场景有哪些利用凸包计算二维平面的面积或者三维空间">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-06-16T07:42:37.874Z">
-<meta property="article:modified_time" content="2021-06-16T08:36:43.448Z">
+<meta property="article:published_time" content="2021-06-16T07:46:24.000Z">
+<meta property="article:modified_time" content="2021-06-16T08:57:28.819Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -37,10 +37,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;06&#x2F;16&#x2F;convhull&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;16&#x2F;convhull&#x2F;&quot;,&quot;title&quot;:&quot;&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;http:&#x2F;&#x2F;example.com&#x2F;2021&#x2F;06&#x2F;16&#x2F;convhull&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;06&#x2F;16&#x2F;convhull&#x2F;&quot;,&quot;title&quot;:&quot;凸包&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title> | Hexo</title>
+<title>凸包 | Hexo</title>
   
 
 
@@ -107,7 +107,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%B8%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">什么是凸包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%B8%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">2.</span> <span class="nav-text">凸包的应用场景有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matlab%E4%B8%AD%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8%E5%87%B8%E5%8C%85"><span class="nav-number">3.</span> <span class="nav-text">matlab中怎样使用凸包</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%B8%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">什么是凸包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%B8%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">凸集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%B8%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">3.</span> <span class="nav-text">凸包的应用场景有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matlab%E4%B8%AD%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8%E5%87%B8%E5%8C%85"><span class="nav-number">4.</span> <span class="nav-text">matlab中怎样使用凸包</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -121,7 +121,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -174,7 +174,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          凸包
         </h1>
 
         <div class="post-meta-container">
@@ -186,7 +186,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-06-16 15:42:37 / Modified: 16:36:43" itemprop="dateCreated datePublished" datetime="2021-06-16T15:42:37+08:00">2021-06-16</time>
+      <time title="Created: 2021-06-16 15:46:24 / Modified: 16:57:28" itemprop="dateCreated datePublished" datetime="2021-06-16T15:46:24+08:00">2021-06-16</time>
     </span>
 
   
@@ -200,8 +200,9 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="什么是凸包"><a href="#什么是凸包" class="headerlink" title="什么是凸包"></a>什么是凸包</h3><p>凸包是计算几何中的概念。 在一个实数向量空间V中, 对于给定几何X,所有包含X的凸集的交集S被称为X的凸包。</p>
-<h3 id="凸包的应用场景有哪些"><a href="#凸包的应用场景有哪些" class="headerlink" title="凸包的应用场景有哪些"></a>凸包的应用场景有哪些</h3><p>利用凸包计算二维平面的面积或者三维空间的体积</p>
-<h3 id="matlab中怎样使用凸包"><a href="#matlab中怎样使用凸包" class="headerlink" title="matlab中怎样使用凸包"></a>matlab中怎样使用凸包</h3><p>convhull和convhulln函数返回最小的凸包边界</p>
+<h3 id="凸集"><a href="#凸集" class="headerlink" title="凸集"></a>凸集</h3><p>凸集（Convex set）是一个点集合，其中每两点之间的直线点都落在该点集合中。<br>凸多边形是: 如果把一个多边形的所有边中，有一条边向两方无限延长成为一直线时，其他各边都在此直线的同旁，那么这个多边形就叫做凸多边形。</p>
+<h3 id="凸包的应用场景有哪些"><a href="#凸包的应用场景有哪些" class="headerlink" title="凸包的应用场景有哪些"></a>凸包的应用场景有哪些</h3><p>利用凸包计算二维平面的面积或者三维空间的体积。</p>
+<h3 id="matlab中怎样使用凸包"><a href="#matlab中怎样使用凸包" class="headerlink" title="matlab中怎样使用凸包"></a>matlab中怎样使用凸包</h3><p>convhull和convhulln(N维凸包)函数返回最小的凸包边界。</p>
 <p>二维</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">P = [<span class="number">0</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">1</span>; <span class="number">1.5</span> <span class="number">0.5</span>; <span class="number">1.5</span> <span class="number">-0.5</span>; <span class="number">1.25</span> <span class="number">0.3</span>; <span class="number">1</span> <span class="number">0</span>; <span class="number">1.25</span> <span class="number">-0.3</span>; <span class="number">1</span> <span class="number">-1</span>];</span><br><span class="line">[k,av] = convhull(P);</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(P(:, <span class="number">1</span>), P(:<span class="number">2</span>), <span class="string">&#x27;*&#x27;</span>)</span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line"><span class="built_in">plot</span>(P(k, <span class="number">1</span>), P(k, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
 <p>三维</p>
@@ -219,6 +220,15 @@
 
         
 
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/06/16/image-classifier/" rel="next" title="image_classifier">
+                  image_classifier <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
