@@ -116,7 +116,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -155,7 +155,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/16/hello/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/16/convhull/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -168,7 +168,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/16/hello/" class="post-title-link" itemprop="url">hello</a>
+          <a href="/2021/06/16/convhull/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -178,8 +178,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-06-16 15:17:31" itemprop="dateCreated datePublished" datetime="2021-06-16T15:17:31+08:00">2021-06-16</time>
+      <time title="Created: 2021-06-16 15:42:37 / Modified: 16:36:43" itemprop="dateCreated datePublished" datetime="2021-06-16T15:42:37+08:00">2021-06-16</time>
     </span>
 
   
@@ -192,145 +193,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
+          <h3 id="什么是凸包"><a href="#什么是凸包" class="headerlink" title="什么是凸包"></a>什么是凸包</h3><p>凸包是计算几何中的概念。 在一个实数向量空间V中, 对于给定几何X,所有包含X的凸集的交集S被称为X的凸包。</p>
+<h3 id="凸包的应用场景有哪些"><a href="#凸包的应用场景有哪些" class="headerlink" title="凸包的应用场景有哪些"></a>凸包的应用场景有哪些</h3><p>利用凸包计算二维平面的面积或者三维空间的体积</p>
+<h3 id="matlab中怎样使用凸包"><a href="#matlab中怎样使用凸包" class="headerlink" title="matlab中怎样使用凸包"></a>matlab中怎样使用凸包</h3><p>convhull和convhulln函数返回最小的凸包边界</p>
+<p>二维</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">P = [<span class="number">0</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">1</span>; <span class="number">1.5</span> <span class="number">0.5</span>; <span class="number">1.5</span> <span class="number">-0.5</span>; <span class="number">1.25</span> <span class="number">0.3</span>; <span class="number">1</span> <span class="number">0</span>; <span class="number">1.25</span> <span class="number">-0.3</span>; <span class="number">1</span> <span class="number">-1</span>];</span><br><span class="line">[k,av] = convhull(P);</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(P(:, <span class="number">1</span>), P(:<span class="number">2</span>), <span class="string">&#x27;*&#x27;</span>)</span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line"><span class="built_in">plot</span>(P(k, <span class="number">1</span>), P(k, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>三维</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[x,y,z] = meshgrid(-2:1:2, -2:1:2, -2:1:2);</span><br><span class="line">x = x(:);</span><br><span class="line">y = y(:);</span><br><span class="line">z = z(:);</span><br><span class="line"></span><br><span class="line">[k1, av1] = convhull(x, y, z);</span><br><span class="line">trisurf(k1, x, y, z, &#x27;FaceColor&#x27;, &#x27;cyan&#x27;);</span><br><span class="line">axis equal</span><br></pre></td></tr></table></figure>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/16/Welcome/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/16/Welcome/" class="post-title-link" itemprop="url">Welcome</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-16 14:32:55" itemprop="dateCreated datePublished" datetime="2021-06-16T14:32:55+08:00">2021-06-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/16/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/16/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-16 14:30:53" itemprop="dateCreated datePublished" datetime="2021-06-16T14:30:53+08:00">2021-06-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>k是索引，以向量或矩阵形式返回。<br>对于二维点，k 是一个列向量，其中包含构成凸包的输入点的行索引，按逆时针排列。<br>对于三维点，k 是表示构成凸包的三角剖分的三列矩阵。每行表示三角剖分的一个分面。值表示输入点的行索引。<br>av是标量,面积或者体积</p>
 
       
     </div>
