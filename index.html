@@ -159,7 +159,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/16/image-classifier/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/22/image-classifier/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -172,7 +172,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/16/image-classifier/" class="post-title-link" itemprop="url">卷积神经网络预测手写体数字</a>
+          <a href="/2021/06/22/image-classifier/" class="post-title-link" itemprop="url">卷积神经网络预测手写体数字</a>
         </h2>
 
         <div class="post-meta-container">
@@ -182,16 +182,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-06-16 16:46:24" itemprop="dateCreated datePublished" datetime="2021-06-16T16:46:24+08:00">2021-06-16</time>
+      <time title="Created: 2021-06-22 16:46:24 / Modified: 21:05:35" itemprop="dateCreated datePublished" datetime="2021-06-22T16:46:24+08:00">2021-06-22</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-22 21:02:46" itemprop="dateModified" datetime="2021-06-22T21:02:46+08:00">2021-06-22</time>
-      </span>
 
   
 </div>
@@ -211,7 +205,7 @@
 <li>全连接层<br>全连接层是一种对输入数据直接做线性变换的线性计算层。它是神经网络中最常用的一种层， 用于学习输出数据和输入数据之间的变换关系。全连接层可作为特征提取层使用，在学习特<br>征的同时实现特征融合；也可作为最终的分类层使用，其输出神经元的值代表了每个输出类 别的概率。</li>
 <li>后向传播<br>BP算法的基本思想是通过损失函数对模型参数进行求导， 并根据复合函数求导常用的“链式法则”将不同层的模型参 数的梯度联系起来，使得计算所有模型参数的梯度更简单。</li>
 </ol>
-<h4 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h4><p>CNN模型是一种以卷积为核心的前馈神经网络模型。 20世纪60年代，Hubel和Wiesel在研究猫脑 皮层中用于局部敏感和方向选择的神经元时发现其独特的网络结构可以有效地降低反馈神经网<br>络的复杂性，继而提出了卷积神经网络（ConvoluTIonal Neural Networks，简称CNN）。</p>
+<h4 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h4><p>CNN模型是一种以卷积为核心的前馈神经网络模型。 20世纪60年代，Hubel和Wiesel在研究猫脑 皮层中用于局部敏感和方向选择的神经元时发现其独特的网络结构可以有效地降低反馈神经网<br>络的复杂性，继而提出了卷积神经网络（Convolutional Neural Networks，简称CNN）。</p>
 <ol>
 <li>卷积<br>卷积是分析数学中的一种基础运算，其中对输入数据做运算时所用到的函数称为卷积核。</li>
 <li>卷积层<br>卷积层是使用一系列卷积核与多通道输入数据做卷积的线性计算层。卷积层的提出是为了利用 输入数据（如图像）中特征的局域性和位置无关性来降低整个模型的参数量。卷积运算过程与<br>图像处理算法中常用的空间滤波是类似的。因此，卷积常常被通俗地理解为一种“滤波”过程， 卷积核与输入数据作用之后得到了“滤波”后的图像，从而提取出了图像的特征。</li>
