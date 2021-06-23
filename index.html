@@ -184,7 +184,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-06-23 10:24:28 / Modified: 15:31:34" itemprop="dateCreated datePublished" datetime="2021-06-23T10:24:28+08:00">2021-06-23</time>
+      <time title="Created: 2021-06-23 10:24:28 / Modified: 15:40:53" itemprop="dateCreated datePublished" datetime="2021-06-23T10:24:28+08:00">2021-06-23</time>
     </span>
 
   
@@ -201,7 +201,8 @@
 <ol>
 <li>Structure From Motion(SFM:从运动中恢复结果)<br>从运动中恢复结构是从一系列图像的投影中，重建3D结构的过程。输入是从不同视点获取的同一对象的一组重叠对象。 输出是对象的3D重建，以及重建的所有图像的内在和外在相机参数。</li>
 </ol>
-<p><img src="incremental-sfm.png" alt="img.png"><br>colmap的三维重建的流水线</p>
+<img src="/2021/06/23/how-to-generate-a-measurement-report-using-3d-reconstruction/incremental-sfm.png" class="" title="This is an image">
+<p>colmap的三维重建的流水线</p>
 <p>通常情况下，SFM系统将次过程分为三个阶段:</p>
 <ul>
 <li><p>特征检测和提取 第一步: 特征检测和提取是找到图像中的稀疏特征点,并用数字描述子描述他们的外观. 第二步: 你必须确定你的相机内参模型(?)<br>此过程称为相机标定其目的是为了确定空间物体表面某点的三维几何位置与其在图像中对应点之间的相互关系， 必须建立摄像机成像的几何模型,这些几何模型参数就是摄像机参数。求解参数的过程称之为摄像机标定。(此处省略.)</p>
